@@ -1,0 +1,145 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+:root{
+  --box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+}
+.main-container{
+  background-color: #f7f7f7;
+   width: 100vw;
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  min-width: 25%;
+}
+
+.main-header{
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+.balance-header{
+  font-size: 1.5rem;
+}
+.balance-amount{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.incomeExpenses{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: 1rem;
+  /* border: 2px solid; */
+}
+.income-expense-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:1.5rem;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: bold;
+  box-shadow: var(--box-shadow);
+}
+
+.income-amount{
+  color:#2eec71;
+}
+.expense-amount{
+  color:#c0293b;
+}
+
+
+.transaction-header{
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+}
+.transactionList{
+  margin: 1rem 0rem;
+  width: 100%;
+}
+.transaction-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.4rem;
+  box-shadow: var(--box-shadow);
+}
+.addTransaction{
+  margin-top: 1rem;
+}
+
+.addTransaction-Header{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-bottom: 1.5em;
+  /* color:red; */
+}
+.form>*{
+  display: block;
+}
+
+.labels{
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+input{
+margin-top: 1em;
+width: 100%;
+box-shadow: var(--box-shadow);
+border: none;
+padding: 0.5em;
+}
+
+.btn{
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  margin-top: 1em;
+  background-color: violet;
+  color:white;
+  border: none;
+}
+
+.btn:hover{
+   cursor: pointer;
+   color:black;
+}
+
+.green{
+  border-right:4px solid #2eec71;
+  
+}
+.red{
+  border-right:4px solid #c0293b;
+}
+
+.btn-delete{
+  cursor: pointer;
+  color:red;
+  background-color: none;
+  border: none;
+  font-size: 1.8rem;
+  opacity:0
+}
+
+.transaction-item:hover  .btn-delete  {
+  opacity: 1;
+} 
+ 
