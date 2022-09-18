@@ -19,6 +19,7 @@ export const GlobalProvider = ({ children }) => {
     try{
       // we are making just a /users request we have set proxy:"http//:localhost:3000" in package.json
          const res=await axios.get("/users");
+         console.log(res);
          dispatch({
           type:"GET_INITIAL_TRANSACTIONS",
           payload:res.data.data,

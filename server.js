@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import colors from "colors"; // yellow color is appearing due to this(yellow.bold);
 import router from "./Routes/routes.js";
 import connectDB from "./config/database.js";
-
+import path from "path"
 
 
 const app=express();
@@ -15,12 +15,16 @@ connectDB();
 const PORT=process.env.PORT||5000; // process.env is path to access all env variables;
 
 
-//will handle all basic url request
-// app.get("/",(req,res)=>{
-//     res.send("Hello From Server JS");
-// })
-// will handle /users request to routes
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
 app.use('/users',router);
+
+if(process.env.NODE_ENV==="production"){
+    app.use(express.static("client/build"));
+
+    app.get("*",(req,res)=>res.send(path.resolve(__dirname,"client","build","index.html")))
+}
 
 
 app.listen(PORT,()=>{

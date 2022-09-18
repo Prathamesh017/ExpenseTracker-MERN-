@@ -2,6 +2,7 @@ import Transactions from "../models/route.js"
 // @description -->it will get all Tranasction
 //@route   --> http://127.0.0.1:3000/users
 const getAllTransactions=async(req,res,next)=>{
+    
     try {
         // this will find all tranacitons done overall till now return this data to client which we can show on screen
         const  transactions=await Transactions.find();

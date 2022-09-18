@@ -17,7 +17,7 @@ useEffect(()=>{
   getInitialTransactions();
 },[])
 
-
+console.log(transactions);
   return (
     <>
     <h3 className='transaction-header'>History</h3>
